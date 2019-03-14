@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.css">
+
+      <title>My Contacts</title>
+
+</head>
+    <body>
+        
+      <div class="container">
+          
+        <h1 class="center-align">
+          My Contacts
+        </h1>
+          
+        <input type="text" id="filterInput" placeholder="Search names...">
+          
+<ul id="names" class="collection with-header">
+    <li class="collection-header">
+        <h5>A</h5>
+        </li>
+        <li class="collection-item">
+            <a href="#">Ave</a>
+        </li>
+        <li class="collection-item">
+            <a href="#">ADAM</a>
+        </li>
+        <li class="collection-item">
+            <a href="#">Aylo</a>
+        </li>
+        <li class="collection-item">
+            <a href="#">Anna</a>
+        </li>
+        <li class="collection-header">
+            <h5>B</h5>
+        </li>
+        <li class="collection-item">
+            <a href="#">Brax</a>
+        </li>
+         <li class="collection-item">
+            <a href="#">Bill</a>
+         </li>
+        <li class="collection-item">
+            <a href="#">Banner</a>
+         </li>
+         <li class="collection-item">
+            <a href="#">Brant</a>
+         </li>
+         <li class="collection-header">
+            <h5>C</h5>
+         </li>
+         <li class="collection-item">
+            <a href="#">Connie</a>
+         </li>
+         <li class="collection-item">
+            <a href="#">Camilia</a>
+         </li>
+      <li class="collection-item">
+          <a href="#">Cyrus</a>
+        </li>
+        <li class="collection-header">
+            <h5>D</h5>
+         </li>
+         <li class="collection-item">
+          <a href="#">Danika</a>
+        </li>
+         <li class="collection-header">
+            <h5>E</h5>
+         </li>
+         <li class="collection-item">
+          <a href="#">Eragon</a>
+        </li>
+        <li class="collection-header">
+            <h5>F</h5>
+         </li>
+           <li class="collection-item">
+          <a href="#">Finn</a>
+        </li>
+                <li class="collection-item">
+          <a href="#">Fortin</a>
+        </li>
+         <li class="collection-header">
+            <h5>G</h5>
+         </li>
+        <li class="collection-item">
+          <a href="#">Gamma</a>
+        </li>
+         <li class="collection-header">
+            <h5>H</h5>
+         </li>
+         <li class="collection-item">
+          <a href="#">Haxour</a>
+        </li>
+          <li class="collection-header">
+            <h5>I</h5>
+         </li>
+           <li class="collection-item">
+          <a href="#">Ian</a>
+        </li>
+        <li class="collection-header">
+            <h5>J</h5>
+         </li>
+        <li class="collection-item">
+          <a href="#">Jexa</a>
+        </li>
+          <li class="collection-header">
+            <h5>K</h5>
+              </li>
+                <li class="collection-item">
+          <a href="#">Kolt</a>
+        </li>
+            <li class="collection-item">
+          <a href="#">Karzen</a>
+        </li>
+          <li class="collection-header">
+            <h5>L</h5>
+              </li>
+           <li class="collection-item">
+          <a href="#">Lonn</a>
+        </li>
+           <li class="collection-header">
+            <h5>M</h5>
+              </li>
+           <li class="collection-item">
+          <a href="#">Mori</a>
+        </li>
+           <li class="collection-header">
+            <h5>N</h5>
+              </li>
+            <li class="collection-item">
+          <a href="#">North</a>
+        </li>
+          <li class="collection-header">
+            <h5>O</h5>
+              </li>
+            <li class="collection-item">
+          <a href="#">Oron</a>
+        </li>
+          <li class="collection-header">
+            <h5>P</h5>
+              </li>
+           <li class="collection-item">
+          <a href="#">Paris</a>
+        </li>
+          <li class="collection-header">
+            <h5>Q</h5>
+              </li>
+            <li class="collection-item">
+          <a href="#">Quinn</a>
+        </li>
+          <li class="collection-header">
+            <h5>R</h5>
+              </li>
+             <li class="collection-item">
+          <a href="#">Raze</a>
+            <li class="collection-item">
+          <a href="#">Rayden</a>
+        </li>
+        </ul>
+    </div>
+        <script>
+        //get input element
+        let filterInput = document.getElementById('filterInput');
+        //add event listener
+        filterInput.addEventListener('keyup', filterNames);
+        function filterNames(){
+        //Get value of input
+        let filterValue = document.getElementById('filterInput').value.toUpperCase();
+        //ger names ul
+        let ul = document.getElementById('names');
+        //get lis from ul
+        let li = ul.querySelectorAll('li.collection-item');
+        //loop through collection-item lis
+        for(let i = 0;i < li.length;i++){
+        let a = li[i].getElementByTagName('a')[0];
+        // If matched
+        if(a.innerHTML.toUpperCase().indexOf(filterValue) > -1){
+        li[i].style.display = '';
+        }else {
+            li[i].style.display = 'none';
+        }
+        }
+        }
+        </script>
+    </body>
+</html>
